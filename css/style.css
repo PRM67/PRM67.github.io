@@ -59,8 +59,29 @@ a { color: var(--accent); }
   letter-spacing: 0.02em;
 }
 .brand span { font-weight: normal; opacity: 0.75; }
-.nav-link { font-size: 0.9rem; opacity: 0.9; }
+html { scroll-behavior: smooth; }
+.site-nav { display: flex; gap: 20px; }
+.nav-link { font-size: 0.9rem; opacity: 0.9; white-space: nowrap; }
 .nav-link:hover { opacity: 1; text-decoration: underline; }
+
+/* Section shortcuts under the hero name */
+.jump { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.jump a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--navy);
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+.jump a + a { background: transparent; color: var(--accent); border-color: var(--accent); }
+.jump a:hover { filter: brightness(1.15); }
+.jump strong { font-size: 1rem; }
+.section-label { scroll-margin-top: 16px; }
 
 /* ---------- Layout ---------- */
 .wrap {
@@ -264,4 +285,6 @@ a { color: var(--accent); }
   .talk-card h2 { font-size: 1.35rem; }
   .talk-body { font-size: 1.08rem; }
   .brand span { display: none; }
+  .site-nav { gap: 14px; }
+  .jump { justify-content: center; }
 }
